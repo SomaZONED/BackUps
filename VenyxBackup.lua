@@ -1909,7 +1909,7 @@ do
 		for i, section in pairs(self.sections) do
 			size = size + (section.container.Parent.AbsoluteSize.Y + padding)
 		end
-		
+		print(self.container.ClassName)
 		self.container.CanvasSize = UDim2.new(0, 0, 0, size)
 		self.container.ScrollBarImageTransparency = (size > self.container.AbsoluteSize.Y) and 0 or 1 -- true or false cannot be automatically cast to numbers in Lua (unlike some other languages like JavaScript) well they used to be
 		
