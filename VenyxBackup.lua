@@ -703,10 +703,10 @@ do
 			
 			debounce = true
 			text.TextSize = 0
-			utility:Tween(button.Title, {TextSize = 14}, 0.2)
+			utility:Tween(button.Title, {TextSize = 14}, 0.1)
 			
-			wait(0.2)
-			utility:Tween(button.Title, {TextSize = 12}, 0.2)
+			wait(0.1)
+			utility:Tween(button.Title, {TextSize = 12}, 0.1)
 			
 			if callback then
 				callback(function(...)
@@ -1909,7 +1909,7 @@ do
 		for i, section in pairs(self.sections) do
 			size = size + (section.container.Parent.AbsoluteSize.Y + padding)
 		end
-		print(self.container.ClassName)
+		
 		self.container.CanvasSize = UDim2.new(0, 0, 0, size)
 		self.container.ScrollBarImageTransparency = (size > self.container.AbsoluteSize.Y) and 0 or 1 -- true or false cannot be automatically cast to numbers in Lua (unlike some other languages like JavaScript) well they used to be
 		
